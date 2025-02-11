@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipex.h                                            :+:      :+:    :+:   */
+/*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/06 02:58:49 by daxferna          #+#    #+#             */
-/*   Updated: 2025/02/06 03:26:12 by daxferna         ###   ########.fr       */
+/*   Created: 2025/02/06 03:24:00 by daxferna          #+#    #+#             */
+/*   Updated: 2025/02/06 13:15:20 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PIPEX_H
-# define PIPEX_H
+#include "../pipex.h"
 
-// errors.c
-void	error(int code);
-
-#endif
+void	error(int code)
+{
+	if (code == 1)
+	{
+		ft_putstr_fd("Error. Wrong number of arguments\n", 2);
+		ft_putstr_fd("Correct usage: ./pipex infile cmd1 cmd2 outfile\n", 2);
+	}
+	exit(1);
+}

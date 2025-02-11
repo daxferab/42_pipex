@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipex.h                                            :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/06 02:58:49 by daxferna          #+#    #+#             */
-/*   Updated: 2025/02/06 03:26:12 by daxferna         ###   ########.fr       */
+/*   Created: 2025/02/06 03:21:43 by daxferna          #+#    #+#             */
+/*   Updated: 2025/02/11 20:22:34 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PIPEX_H
-# define PIPEX_H
+#include "../pipex.h"
 
-// errors.c
-void	error(int code);
-
-#endif
+int	main(int argc, char **argv)
+{
+	if (argc != 5)
+		error (1);
+	 
+	return (0);
+}
