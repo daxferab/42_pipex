@@ -4,8 +4,10 @@ CFLAGS = -Wall -Werror -Wextra -g3
 
 LIBFT = libft/libft.a
 
-SRC_FILES = src/main.c\
-			src/errors.c\
+SRC_FILES = src/errors.c\
+			src/execution.c\
+			src/main.c\
+			src/processes.c\
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 

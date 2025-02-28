@@ -4,3 +4,6 @@
 *.txt
 *.o
 *.d
+pipex
+infile
+outfile
