@@ -6,7 +6,7 @@
 /*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 03:24:00 by daxferna          #+#    #+#             */
-/*   Updated: 2025/02/06 13:15:20 by daxferna         ###   ########.fr       */
+/*   Updated: 2025/02/25 10:43:19 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,13 @@ void	error(int code)
 		ft_putstr_fd("Error. Wrong number of arguments\n", 2);
 		ft_putstr_fd("Correct usage: ./pipex infile cmd1 cmd2 outfile\n", 2);
 	}
+	if (code == 2)
+		ft_putstr_fd("Error. Pipe failed\n", 2);
+	if (code == 3)
+		ft_putstr_fd("Error. Fork failed\n", 2);
+	if (code == 4)
+		ft_putstr_fd("Error. Infile failed\n", 2);
+	if (code == 5)
+		ft_putstr_fd("Error. Outfile failed\n", 2);
 	exit(1);
 }

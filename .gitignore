@@ -1,0 +1,6 @@
+*.pdf
+*.out
+.vscode
+*.txt
+*.o
+*.d
