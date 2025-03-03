@@ -6,7 +6,7 @@
 /*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 16:58:43 by daxferna          #+#    #+#             */
-/*   Updated: 2025/02/28 19:29:46 by daxferna         ###   ########.fr       */
+/*   Updated: 2025/03/03 01:51:03 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ static char	*get_path(char **envp, char	*cmd)
 		i++;
 	path_line = ft_strdup(envp[i] + 5); //TODO: Liberar
 	path_split = ft_split(path_line, ':'); //TODO: Liberar
+	cmd = ft_strjoin("/", cmd); //TODO: Liberar
 	i = 0;
 	while (path_split[i])
 	{

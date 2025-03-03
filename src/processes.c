@@ -6,7 +6,7 @@
 /*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 16:56:08 by daxferna          #+#    #+#             */
-/*   Updated: 2025/02/28 19:29:37 by daxferna         ###   ########.fr       */
+/*   Updated: 2025/03/03 01:52:57 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	parent_process(int *pipe, char **argv, char **envp) //Ejecuta cmd2 en fdpipe
 		close(pipe[1]);
 		fdout = open(argv[4], O_WRONLY | O_CREAT , 0644);
 		if (fdout == -1)
-		error(5);
+			error(5);
 		dup2(pipe[0], STDIN_FILENO);
 		dup2(fdout, STDOUT_FILENO); //TODO: Proteger dup2
 		close(pipe[0]);
