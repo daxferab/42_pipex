@@ -6,7 +6,7 @@
 /*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 03:24:00 by daxferna          #+#    #+#             */
-/*   Updated: 2025/02/28 16:31:05 by daxferna         ###   ########.fr       */
+/*   Updated: 2025/03/03 20:23:48 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@ void	error(int code)
 		ft_putstr_fd("Error. Infile failed\n", 2);
 	if (code == 5)
 		ft_putstr_fd("Error. Outfile failed\n", 2);
+	if (code == 6)
+		ft_putstr_fd("Error. Command not found\n", 2);
 	exit(1);
 }
