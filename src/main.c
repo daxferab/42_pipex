@@ -6,7 +6,7 @@
 /*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 03:21:43 by daxferna          #+#    #+#             */
-/*   Updated: 2025/03/03 02:12:27 by daxferna         ###   ########.fr       */
+/*   Updated: 2025/03/03 02:20:02 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,4 @@ int	main(int argc, char **argv, char **envp) // infile cmd1 cmd2 outfile
 	return (0);
 }
 
-//TODO: Comprobar que los argumentos no esten vacios?
+//TODO: Gestionar errores de argumentos vacíos, erroneos...
