@@ -6,7 +6,7 @@
 /*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 16:56:08 by daxferna          #+#    #+#             */
-/*   Updated: 2025/03/03 01:52:57 by daxferna         ###   ########.fr       */
+/*   Updated: 2025/03/03 02:07:07 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	child_process(int *pipe, char **argv, char **envp) //Ejecuta cmd1 en infile
 	dup2(pipe[1], STDOUT_FILENO);
 	close(pipe[1]);
 	close(fdin);
-	execute(envp, argv[1]);
+	execute(envp, argv[2]);
 }
 
 int	parent_process(int *pipe, char **argv, char **envp) //Ejecuta cmd2 en fdpipe[0] y escribe en outfile
@@ -32,14 +32,12 @@ int	parent_process(int *pipe, char **argv, char **envp) //Ejecuta cmd2 en fdpipe
 	int	pid2;
 	int	fdout;
 
-	wait(NULL);
+	close(pipe[1]);
 	pid2 = fork();
 	if (pid2 == -1)
 		error(3);
-	wait(NULL);
 	if (pid2 == 0)
 	{
-		close(pipe[1]);
 		fdout = open(argv[4], O_WRONLY | O_CREAT , 0644);
 		if (fdout == -1)
 			error(5);
@@ -47,7 +45,7 @@ int	parent_process(int *pipe, char **argv, char **envp) //Ejecuta cmd2 en fdpipe
 		dup2(fdout, STDOUT_FILENO); //TODO: Proteger dup2
 		close(pipe[0]);
 		close(fdout);
-		execute(envp, argv[2]);
+		execute(envp, argv[3]);
 	}
 	return (0);
 }
