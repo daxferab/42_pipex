@@ -6,7 +6,7 @@
 /*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 02:58:49 by daxferna          #+#    #+#             */
-/*   Updated: 2025/02/28 19:04:58 by daxferna         ###   ########.fr       */
+/*   Updated: 2025/03/04 16:28:47 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 # include "libft/libft.h"
 # include <sys/wait.h>
 
-// errors.c
+// errorhandler.c
+void	free_split(char **split);
 void	error(int code);
 
 // execution.c

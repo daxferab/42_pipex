@@ -1,10 +1,10 @@
 NAME = pipex
 CC = cc
-CFLAGS = -Wall -Werror -Wextra -g3
+CFLAGS = -Wall -Werror -Wextra
 
 LIBFT = libft/libft.a
 
-SRC_FILES = src/errors.c\
+SRC_FILES = src/errorhandler.c\
 			src/execution.c\
 			src/main.c\
 			src/processes.c\
@@ -29,7 +29,7 @@ fclean:
 
 re: fclean all
 
-run: all
-	./$(NAME)
+valgrind: all
+	valgrind --trace-children=yes ./$(NAME) infile "ls -l" "wc -l" outfile
 
 .PHONY: all clean fclean re
