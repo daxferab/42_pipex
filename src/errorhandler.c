@@ -6,7 +6,7 @@
 /*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 03:24:00 by daxferna          #+#    #+#             */
-/*   Updated: 2025/03/04 16:57:19 by daxferna         ###   ########.fr       */
+/*   Updated: 2025/03/05 14:50:23 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	free_split(char **split)
 		free(split[i++]);
 }
 
-void	error(int code)
+void	error(int code, int errno)
 {
 	if (code == 1)
 	{
@@ -42,5 +42,10 @@ void	error(int code)
 		ft_putstr_fd("Error. Dup2 failed\n", 2);
 	if (code == 8)
 		ft_putstr_fd("Error. Execution failed", 2);
-	exit(1);
+	exit(errno);
 }
+
+//FIXME: If outfile is empty at the end of the program, exit code 1
+//FIXME: If outfile can`t be accessed, exit code 1
+//FIXME: If second cmd doesn`t exist, leaks and wrong exit (has to be 127)
+//FIXME: If flags on second command dont exist, exit 1
