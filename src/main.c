@@ -6,13 +6,13 @@
 /*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 03:21:43 by daxferna          #+#    #+#             */
-/*   Updated: 2025/03/05 14:56:35 by daxferna         ###   ########.fr       */
+/*   Updated: 2025/03/10 19:04:39 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../pipex.h"
 
-int	main(int argc, char **argv, char **envp) // infile cmd1 cmd2 outfile
+int	main(int argc, char **argv, char **envp)
 {
 	pid_t	pid1;
 	int		fdpipe[2];
