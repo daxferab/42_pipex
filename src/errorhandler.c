@@ -6,7 +6,7 @@
 /*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 03:24:00 by daxferna          #+#    #+#             */
-/*   Updated: 2025/03/19 03:29:03 by daxferna         ###   ########.fr       */
+/*   Updated: 2025/03/20 01:59:55 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,7 @@ void	error(int code)
 		ft_putstr_fd("Error. Dup2 failed\n", 2);
 	if (code == 8)
 		ft_putstr_fd("Error. Execution failed", 2);
+	if (code == 9)
+		ft_putstr_fd("Error. Malloc failed\n", 2);
 	exit(1);
 }
